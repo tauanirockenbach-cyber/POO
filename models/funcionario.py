@@ -54,7 +54,7 @@ class Funcionario:
     @salario.setter
     def salario(self, valor):
         if valor <0:
-             raise ValueError(f"O salario {valor} não pode ser negativa")
+             raise ValueError(f"O salario {valor} não pode ser negativo!")
         self.__salario = valor
 
         

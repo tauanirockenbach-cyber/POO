@@ -10,8 +10,11 @@
 
 from models.funcionario import Funcionario
 from models.setor import Setor
+from models.fornecedor import Fornecedor
 
 try:
+    fornecedor1 = Fornecedor(1, "Fornecedor A", "12345678901234", "123456789", "fornecedorA@email.com")
+    fornecedor1.apresentar()
     setor1 = Setor(1,"TA")
     funcionario1 = Funcionario(1, "Matheus", "Dev", 5500.00, setor1)
     funcionario1.apresentar()
@@ -26,6 +29,10 @@ try:
     print()
 
     funcionario1.apresentar()
-
+    fornecedor1.razao_social = "Fornecedor B"
+    fornecedor1.telefone = "987654321"
+    fornecedor1.email = "fornecedorB@email.com"
+    fornecedor1.apresentar()
 except ValueError as e:
     print(f"Erro de validação: {e}")
+
